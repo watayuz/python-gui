@@ -21,9 +21,6 @@ class RootWidget(GridLayout):
         self.add_widget(Label(text='text Label'))
         self.add_widget(button)
 
-
-
-
 class TestApp(App):
     def build(self):
 
