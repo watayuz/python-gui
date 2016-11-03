@@ -7,18 +7,26 @@ from kivy.uix.textinput import TextInput
 
 from kivy.uix.gridlayout import GridLayout
 
+# about layout
+# 下はGridLayout
+# 上はFloatLayout
+
 class RootWidget(GridLayout):
 
-    def buttonClicked(self, btn):
+    def buttonClicked(self, instance):
         print('press button')
 
     def __init__(self, **kwargs):
         super(RootWidget, self).__init__(cols=1)
 
-        button = Button(text='push Button')
+        textinput = TextInput()
+        label = Label(text='label')
+        button = Button(text='push Button',
+            height=30)
         button.bind(on_press=self.buttonClicked)
 
-        self.add_widget(Label(text='text Label'))
+        self.add_widget(textinput)
+        self.add_widget(label)
         self.add_widget(button)
 
 class TestApp(App):
