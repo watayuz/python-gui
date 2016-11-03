@@ -8,8 +8,9 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.gridlayout import GridLayout
 
 # about layout
+# 全体をFloatLayoutのorientationをvertical
 # 下はGridLayout
-# 上はFloatLayout
+# 上はFloatLayoutのorientationをhorizontal
 
 class RootWidget(GridLayout):
 
